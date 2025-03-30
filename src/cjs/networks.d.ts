@@ -10,7 +10,7 @@
  */
 export interface Network {
     messagePrefix: string;
-    bech32: string;
+    bech32: string | null; // ✅ Allow null for Digiwage (no Bech32)
     bip32: Bip32;
     pubKeyHash: number;
     scriptHash: number;
@@ -20,6 +20,7 @@ interface Bip32 {
     public: number;
     private: number;
 }
+
 /**
  * Represents the Bitcoin network configuration.
  */
@@ -32,4 +33,9 @@ export declare const regtest: Network;
  * Represents the testnet network configuration.
  */
 export declare const testnet: Network;
+/**
+ * Represents the Digiwage network configuration.
+ */
+export declare const digiwage: Network;
+
 export {};
