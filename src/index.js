@@ -1,7 +1,7 @@
-var qtumjs = require('bitcoinjs-lib')
+var digiwagejs = require('bitcoinjs-lib')
 
-Object.assign(qtumjs.networks, require('./networks'))
+Object.assign(digiwagejs.networks, require('./networks'))
 
-qtumjs.utils = require('./utils')
+digiwagejs.utils = require('./utils')
 
-module.exports = qtumjs
+module.exports = digiwagejs
